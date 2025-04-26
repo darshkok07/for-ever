@@ -1,13 +1,75 @@
+import { useContext, useState } from 'react';
 import Subscribe from '../components/Subscribe';
-
+import { ShopContext } from '../context/ShopContext';
+import { assets } from '../assets/assets';
 
 const Collection = () => {
+    const { products } = useContext(ShopContext);
+    const [showFilter, setShowFilter] = useState(false);
 
-  return (
-    <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-10'>
-      <Subscribe />
-    </div>
-  );
+    return (
+        <div className='flex flex-col'>
+            {/* Main content area */}
+            <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
+                {/* Filter options */}
+                <div className='w-min-60'>
+                    <p 
+                        className='my-2 text-xl flex items-center cursor-pointer gap-2 sm:cursor-default'
+                        onClick={() => setShowFilter(!showFilter)}
+                    >
+                        FILTERS
+                        <img 
+                            src={assets.dropdown_icon} 
+                            className={`h-3 ms:hidden ${showFilter ? 'rotate-90' : ''}`} 
+                            alt="" 
+                        />
+                    </p>
+                    
+                    {/* Category filters - shown on sm: always, shown on mobile when showFilter is true */}
+                    <div className={`border border-gray-300 pi-5 py-3 mt-6 ${showFilter ? 'block' : 'hidden'} sm:block`}>
+                        <p className='mb-3 text-sm font-medium'>CATEGORIES</p>
+                        <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
+                            <p className='flex gap-2'>
+                                <input className='w-4' type='checkbox' value={'Men'} /> Men
+                            </p>
+                            <p className='flex gap-2'>
+                                <input className='w-4' type='checkbox' value={'Women'} /> Women
+                            </p>
+                            <p className='flex gap-2'>
+                                <input className='w-4' type='checkbox' value={'Kids'} /> Kids
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Sub category filter - shown on sm: always, shown on mobile when showFilter is true */}
+                    <div className={`border border-gray-300 pi-5 py-3 mt-6 ${showFilter ? 'block' : 'hidden'} sm:block`}>
+                        <p className='mb-3 text-sm font-medium'>SUBCATEGORIES</p>
+                        <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
+                            <p className='flex gap-2'>
+                                <input className='w-4' type='checkbox' value={'Topwear'} /> Topwear
+                            </p>
+                            <p className='flex gap-2'>
+                                <input className='w-4' type='checkbox' value={'Bottomwear'} /> Bottomwear
+                            </p>
+                            <p className='flex gap-2'>
+                                <input className='w-4' type='checkbox' value={'Winterwear'} /> Winterwear
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                {/* Products section would go here */}
+                <div className="flex-1">
+                    {/* Your products listing would go here */}
+                </div>
+            </div>
+            
+            {/* Centered Subscribe section */}
+            <div className='flex justify-center mt-10'>
+                <Subscribe />
+            </div>
+        </div>
+    );
 };
 
 export default Collection;
