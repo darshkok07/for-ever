@@ -20,10 +20,10 @@ const Contact = () => {
         {/* Content Section */}
         <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
           {/* Image - comes first on mobile */}
-          <div className='w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-1'>
+          <div className='w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-1 mt-6'>
             <img 
               src={assets.contact_img} 
-              className='w-full max-w-md lg:max-w-none lg:w-4/5 rounded-lg shadow-md' 
+              className='w-full max-w-md lg:max-w-none lg:w-[90%] rounded-sm shadow-xl' 
               alt="Contact us" 
             />
           </div>

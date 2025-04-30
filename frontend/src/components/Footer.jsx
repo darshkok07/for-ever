@@ -2,8 +2,8 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-white py-12"> {/* Increased vertical padding */}
-      <div className="container mx-auto px-6 md:px-12"> {/* Increased horizontal padding for larger screens */}
+    <footer className="bg-white mt-14 py-12"> {/* Increased vertical padding */}
+      <div className="container mx-auto"> {/* Increased horizontal padding for larger screens */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20"> {/* Increased gap for better spacing */}
           <div className="text-left">
             <h2 className="text-2xl font-bold text-gray-800">FOREVER</h2> {/* Larger heading */}
