@@ -114,10 +114,10 @@ const Collection = () => {
             {/** Right side */}
             <div className='flex-1'>
                 <div className='flex justify-between text-base sm:text-2xl mb-4'>
-                    <div className='flex flex-row text-gray-500 gap-2 font-semibold'>
+                    <div className='flex flex-row text-gray-500 gap-2 font-bold'>
                         <h1>ALL</h1>
                         <h1 className='text-blue-400'>COLLECTIONS</h1>
-                        <div className='bg-gray-400 w-8 lg:w-16 mt-[15px] h-[1.9px]'></div>
+                        <div className='bg-gray-400 w-8 lg:w-16 mt-[15px] h-[2.2px]'></div>
                     </div>
 
                     {/** Products Sort */}

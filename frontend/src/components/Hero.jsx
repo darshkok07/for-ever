@@ -3,7 +3,7 @@ import { assets } from '../assets/assets';
 
 const Hero = () => {
   return (
-    
+     
     <div className='flex flex-col items-center sm:flex-row border border-gray-400 m-10'>
       <div className='sm:w-full flex items-center justify-center sm:py-0'>
         <div className='text-[#414141]'>
