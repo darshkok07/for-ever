@@ -5,7 +5,7 @@ import { products } from "../assets/assets";
 export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
-    const [showSearch, setShowSearch] = useState(false);
+    const [SEARCH_VISIBLE, setSearchVisible] = useState(false);  // Changed to uppercase
     const [search, setSearch] = useState("");
     const currency = "$"; 
     const deliverfee = 10;
@@ -14,8 +14,8 @@ const ShopContextProvider = (props) => {
         products,
         currency,
         deliverfee,
-        showSearch,
-        setShowSearch,
+        SEARCH_VISIBLE,  // Updated to match
+        setSearchVisible,  // Updated to match
         search,
         setSearch
     };
